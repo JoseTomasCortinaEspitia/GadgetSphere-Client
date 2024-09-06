@@ -19,10 +19,14 @@ const Home = () => {
     }, [dispatch])
 
     return (
-        <div>
-            <Navbar />
-            <Cards allGadgets={allGadgets}/>
-        </div>
+        <>
+            
+            <div>
+                <Navbar />
+                <Cards allGadgets={allGadgets}/>
+            </div>
+        </>
+
     )
 }
 
