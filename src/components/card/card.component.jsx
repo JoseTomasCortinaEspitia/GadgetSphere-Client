@@ -1,22 +1,44 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import styles from './card.module.css'
 
 const Card = ({gadget}) => {
+
+    // const [isFav, setIsFav] = useState(false);
+
+    // const handleFavorite = () => {
+    //     if(isFav){
+    //         setIsFav(false);
+    //     }else{
+    //         setIsFav(true);
+    //     }
+    // }
+
     //console.log(gadget)
     return (
         <>              
-        
-            <div className="col mb-5">
-                <div className="card h-100">
+            <div className={styles.card}>
+            <Link to={`/home/${gadget.id}`}>
+                <div className={styles.card__content}>
                         {/* <!-- Sale badge--> */}
                         <div className="badge bg-dark text-white position-absolute" style={{ top: '0.5rem', right: '0.5rem' }}>Sale</div>
-                        {/* <!-- Product image--> */}
-                        <img className="card-img-top" src={gadget.image} alt="..." />
-                        {/* <!-- Product details--> */}
-                        <div className="card-body p-4">
+                        <div className={styles.cardHeader}>
+                        <div className={styles.cardHeaderwrapper}>
+                            {/* {isFav ? (
+                                    <button onClick={handleFavorite}>❤️</button>
+                                    ) : (
+                                        <button onClick={handleFavorite}>🤍</button>
+                                        )
+                            } */}
+                            {/* <button onClick={()=>props.onClose(props.id)}>X</button> */}
+                        </div>
+                                {/* <!-- Product image--> */}
+                                <img className={styles.imgcard} src={gadget.image} alt="..." />
+                                {/* <!-- Product details--> */}
+                        </div>
                             <div className="text-center">
                                 {/* <!-- Product name--> */}
-                                <h5 className="fw-bolder">{gadget.name}</h5>
+                                <p>{gadget.name}</p>
                                 {/* <!-- Product reviews--> */}
                                 <div className="d-flex justify-content-center small text-warning mb-2">
                                     <div className="bi-star-fill"></div>
@@ -29,17 +51,12 @@ const Card = ({gadget}) => {
                                 <span className="text-muted text-decoration-line-through">$20.00</span>
                                 ${gadget.price}COP
                             </div>
-                        </div>
-                        {/* <!-- Product actions--> */}
-                        <div className="card-footer p-4 pt-0 border-top-0 bg-transparent" style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-                            <div className="text-center">
-                                <a className="btn btn-outline-dark mt-auto" href="#">Ver mas</a>
-                            </div>
-                            <div className="text-center">
-                                <a className="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a>
-                            </div>
-                        </div>  
+                        
+            <button className="text-center">
+                Agregar al carrito
+            </button>              
                 </div>
+            </Link>
             </div>
 
         {/* <div className={styles.card} >
