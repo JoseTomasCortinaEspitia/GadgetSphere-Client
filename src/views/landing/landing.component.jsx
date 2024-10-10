@@ -40,7 +40,7 @@ const Landing = () => {
                         <h2>¿Quienes Somos?</h2>
                         <p>En Petify, nos dedicamos a conectar a los amantes de las mascotas con los mejores accesorios y productos. Nuestra misión es proporcionar un espacio donde cada dueño pueda encontrar lo que necesita para cuidar y consentir a sus compañeros peludos, creando vínculos más fuertes y duraderos con ellos.</p>
                         <RouterLink to="/home">
-                            <button className={styles.button2}>¡Accesorio a Casa!</button>
+                            <button className={styles.button1}>¡Accesorio a Casa!</button>
                         </RouterLink>
                     </div>
                 </div>
@@ -68,9 +68,11 @@ const Landing = () => {
                         </div>
                         
                     </div>
+                    <div>
                     <RouterLink to="/home">
                         <button className={styles.button1}>¡Hazlo Tuyo Ahora!</button>
                     </RouterLink>
+                    </div>
                 </div>
             </Element>
         </div>
