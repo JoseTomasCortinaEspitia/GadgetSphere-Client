@@ -387,6 +387,7 @@
     display: flex; /* Hace que el botón use flexbox */
     justify-content: center; /* Centra el botón horizontalmente */
     align-items: center; /* Centra el contenido del botón verticalmente */
+    text-decoration: none; /* Elimina el subrayado */
   }
 }
 
@@ -428,5 +429,6 @@
     width: 60%; /* Ajusta el ancho de los botones */
     font-size: 18px; /* Ajusta el tamaño del texto */
     margin: 10px auto; /* Centra los botones */
+    text-decoration: none;
   }
 }
