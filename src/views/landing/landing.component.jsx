@@ -21,7 +21,7 @@ const Landing = () => {
                 <div className={styles.contenedor1}>
                     <div className={styles.texto1}>
                         <h1 className={styles.titulo}>Petify</h1>
-                        <p>Cuida y consiente a tu mascota con Petify: ¡tu puerta a un mundo de bienestar sin límites!</p>
+                        <p>Cuida y consiente a tu mascota con Petify ¡tu puerta a un mundo de bienestar sin límites!</p>
                         <RouterLink to="/home">
                             <button className={styles.button1}>¡Encuentra tu Accesorio Ideal!</button>
                         </RouterLink>
